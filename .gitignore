@@ -1,0 +1,6 @@
+*.csv
+*.png
+*.html
+venv/
+.venv/
+backtest_trade/ 
