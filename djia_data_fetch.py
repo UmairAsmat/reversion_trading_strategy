@@ -42,10 +42,6 @@ for col in required_cols:
 # Reorder columns
 long_df = long_df[required_cols]
 
-# Sort and clean
-long_df = long_df.sort_values(by=['Date', 'Symbol'])
-long_df = long_df.dropna(subset=['Open', 'High', 'Low', 'Close', 'Adj Close', 'Volume'], how='all')
-
 # Save to CSV
 long_df.to_csv('data/djia_prices_cleaned.csv', index=False)
 print(f"Saved cleaned long-format data to data/djia_prices_cleaned.csv with columns: {required_cols}") 
